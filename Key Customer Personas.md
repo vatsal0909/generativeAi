@@ -242,3 +242,88 @@ Customization: You fine-tune the model with your store’s product data to make 
 Responsibility Considerations: You check that the model doesn’t generate biased responses and is trained on diverse data.
 By considering all these factors, you can pick the right pre-trained model that fits your needs, ensuring the generative AI will be effective for your specific business use case.
 
+# Inproving performance of FM
+1. Prompt Engineering
+What is it?
+Prompt engineering is like crafting the perfect question or instruction that you give to an AI model to get the results you want. The way you ask the AI to do something (the "prompt") will influence the answer it gives.
+
+Example:
+If you ask an AI, “What is the capital of France?” it will respond with “Paris.” But if you ask, “Give me a detailed answer about the capital of France,” it might give a longer and more detailed response. Crafting the question properly is crucial for getting the best results.
+
+Techniques of Prompt Engineering:
+
+Zero-shot prompting: Asking a question without giving any examples. Like “Tell me the capital of France.”
+Few-shot prompting: Giving a few examples to guide the AI. For instance, "The capital of Spain is Madrid. The capital of Italy is Rome. What is the capital of Germany?"
+Chain-of-thought prompting: Asking the AI to explain its reasoning step by step. For example, "First, tell me why France is famous for its food, and then tell me about its capital."
+2. Retrieval-Augmented Generation (RAG)
+What is it?
+RAG is a technique where an AI combines two things:
+
+A retrieval system that looks up relevant information (like finding the right documents or answers from a large database).
+A generative model that takes that information and creates a meaningful, natural response.
+Example:
+Let’s say you ask a question like, “What is the process of photosynthesis?”
+
+The retrieval system will search through a knowledge base (like books or articles) to find information about photosynthesis.
+Then, the generative model takes that information and puts it together in a natural-sounding response: “Photosynthesis is the process by which plants make their own food using sunlight…”
+Business Application of RAG:
+RAG is great for building systems like:
+
+Customer service chatbots that can pull information from product knowledge bases and give accurate, helpful answers.
+Generating high-quality content for articles by gathering facts and summarizing them in a readable form.
+Example:
+A customer asks a chatbot, "How do I reset my Wi-Fi router?" The chatbot uses RAG to search through a manual and provides a detailed, step-by-step guide.
+
+3. Fine-tuning
+What is it?
+Fine-tuning is a way to make a general AI model smarter or more specific for your needs. For instance, a general AI might know a lot about many topics, but you can "fine-tune" it to specialize in something like medical research or customer service.
+
+Example:
+Imagine you have a general AI model like GPT (which is very smart about lots of topics). If you need the model to be really good at answering medical questions, you would fine-tune it by training it with medical data, like articles or journals about health topics.
+
+Types of Fine-tuning:
+
+Instruction fine-tuning: Giving examples of how the AI should respond. For example, “When someone asks for a recipe, give the ingredients and the method.”
+Reinforcement learning: The AI learns by getting feedback from humans. If the AI gives a good answer, it gets positive feedback. If it gives a bad answer, it gets corrections.
+4. Creating a Model from Scratch
+What is it?
+This means starting completely fresh, without using any pre-trained AI models. You build a brand-new AI model tailored specifically for your needs.
+
+Example:
+Imagine you're building a highly specialized AI for predicting stock market trends. If no existing model fits your needs, you would train your own model from the ground up, using data like past stock prices, news articles, and more.
+
+Why it's hard:
+Creating a model from scratch is very resource-intensive and requires a lot of time, data, and computing power. So, it's usually done when there are no pre-existing models that are good enough for the task.
+
+5. Cost Trade-offs for Customization
+What is it?
+When you’re developing an AI system, you have to decide whether to use a pre-trained model (already trained on large datasets) or to create a custom solution.
+
+Cost-accuracy trade-off:
+
+Pre-trained models are cheaper and faster because they already have a lot of general knowledge. But they might not be perfect for your specific task.
+Fine-tuning or creating a model from scratch can improve accuracy but costs more time and resources.
+Example:
+If you want to make a chatbot for your business, you could use a pre-trained chatbot model (quick and easy), or you could fine-tune it to know more about your specific products (more accurate but more expensive).
+
+6. Automated Multi-step Tasks with Agents
+What is it?
+Agents are software tools that can carry out complex tasks step by step automatically. They can manage things like setting up servers, deploying apps, or handling customer service requests.
+
+Example:
+Let’s say you want to set up an online store. An agent can:
+
+Set up the database for storing products.
+Deploy the website code to a server.
+Monitor the server for errors and fix issues automatically.
+Why agents are helpful:
+They make sure the process is smooth, consistent, and efficient. They can also handle multiple tasks at once, like updating servers or generating reports.
+
+Recap with Example in Action:
+Let’s say you’re running a customer support chatbot for an e-commerce store. You could:
+
+Use RAG to pull information from the product knowledge base and answer customer queries like “How do I return my order?”
+Use fine-tuning to make the AI better at understanding your specific product details, like warranty policies.
+Use prompt engineering to ask the AI specific, clear questions like “What are the steps to return an item?”
+Automate the entire support process with agents that can handle tasks like creating return labels and sending follow-up emails.
+
